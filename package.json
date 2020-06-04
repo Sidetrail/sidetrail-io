@@ -8,13 +8,31 @@
     "@testing-library/user-event": "^7.2.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1"
+  },
+  "devDependencies": {
+    "babel-cli": "6.26.0",
+    "babel-preset-env": "^1.5.2",
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.6.0",
+    "eslint-plugin-jest": "^22.20.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-prettier": "2.4.0",
+    "eslint-plugin-react": "^7.5.1",
+    "jest-localstorage-mock": "^2.2.0",
+    "prettier": "^1.9.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "./node_modules/eslint/bin/eslint.js -c ./.eslintrc.json ./src --fix",
+    "lint-html": "./node_modules/eslint/bin/eslint.js --f html -o ./lint.html -c ./.eslintrc.json ./src ",
+    "lint-ci": "./node_modules/eslint/bin/eslint.js -c ./.eslintrc.json ./src --max-warnings 0"
   },
   "eslintConfig": {
     "extends": "react-app"
