@@ -7,7 +7,7 @@ const App = () => (
   <div className="app">
     <Switch>
       {navigationTabs.map(tab => (
-        <Route key={tab.name} path={tab.url} component={tab.component} />
+        <Route key={tab.name} exact path={tab.url} component={tab.component} />
       ))}
     </Switch>
   </div>

@@ -1,3 +1,16 @@
 
 .navigationTabs {
+
+    .tab{
+        color: white;
+        text-decoration: none;
+        font-size: 24px;
+        margin: 12px;
+    }
+    .tab-active{
+
+    }
+    .tab-inactive:hover{
+        color:red;
+    }
 }
