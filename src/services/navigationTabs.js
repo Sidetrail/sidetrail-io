@@ -2,6 +2,7 @@ import SplashPage from '../components/SplashPage/SplashPage';
 import CodePage from '../components/CodePage/CodePage';
 import ContactPage from '../components/ContactPage/ContactPage';
 import BlogPage from '../components/BlogPage/BlogPage';
+import PhotosPage from '../components/PhotosPage/PhotosPage';
 import withNavBar from '../components/PageComponent/PageComponent';
 
 export const navigationTabs = [
@@ -14,6 +15,11 @@ export const navigationTabs = [
     url: '/blog',
     component: withNavBar(BlogPage),
     name: 'Blog',
+  },
+  {
+    url: '/photos',
+    component: withNavBar(PhotosPage),
+    name: 'Photos',
   },
   {
     url: '/code',

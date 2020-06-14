@@ -11,7 +11,7 @@ const ContactPage = props => {
         While I may not be active on all of these accounts, I will see the notifications.
       </div>
       <div className="links">
-        <div>
+        <div className="socialSection">
           <div className="subTitle">Social</div>
           {iconPair(
             <i className="fab fa-instagram" />,
@@ -30,19 +30,19 @@ const ContactPage = props => {
             'https://www.youtube.com/channel/UCPon5JvcOh6hPLQFc6AUvuw',
           )}
         </div>
-        <div>
+        <div className="professionalSection">
           <div className="subTitle">Professional</div>
           {iconPair(
             <i className="fab fa-linkedin-in" />,
             'LinkedIn',
             'https://www.linkedin.com/in/john-t-williams/',
           )}
+          {iconPair(<i className="fab fa-github" />, 'Sidetrail', 'https://github.com/Sidetrail')}
           {iconPair(
             <i className="far fa-envelope" />,
             'John_Williams@Sidetrail.io',
             'mailto:John_Williams@Sidetrail.io',
           )}
-          {iconPair(<i className="fab fa-github" />, 'Sidetrail', 'https://github.com/Sidetrail')}
         </div>
       </div>
     </div>
@@ -50,7 +50,7 @@ const ContactPage = props => {
 };
 
 const iconPair = (icon, name, url) => (
-  <a href={url} className="socialLink">
+  <a href={url} className="socialLink" target="_blank" rel="noreferrer noopener">
     <div className="linkIcon">{icon}</div>
     <div className="linkName">{name}</div>
   </a>
