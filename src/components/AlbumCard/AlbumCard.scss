@@ -1,0 +1,33 @@
+
+.albumCard {    
+    position: relative;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 400px;
+    margin: 12px;
+    .fadedCover{
+        background-color: #12121281;
+        height: 100%;
+        display:flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items:center;
+        padding: 12px;
+        .title{
+            color: white;
+            text-shadow: 1px 1px 15px black;
+            font-family: 'Lato', sans-serif;
+            font-size: 32px;
+            letter-spacing: 0.10em;
+            text-transform: uppercase;
+        }
+        .data{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+}
