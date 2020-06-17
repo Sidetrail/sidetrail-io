@@ -24,7 +24,7 @@ const PhotosPage = props => {
           ))}
         </div>
       </div>
-      <RecentPhotos />
+      {recentPhotos.length && <RecentPhotos recentPhotos={recentPhotos} />}
     </div>
   );
 };

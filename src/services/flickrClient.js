@@ -19,6 +19,8 @@ export const getAlbums = () =>
     .then(resp => resp.data);
 
 export const getPhoto = photoId =>
-  axios.get(getUrlForMethod(`flickr.photos.getSizes&photo_id=${photoId}`)).then(resp => resp.data);
+  axios
+    .get(getUrlForMethod(`flickr.photos.getSizes&photo_id=${photoId}`))
+    .then(resp => ({ id: photoId, ...resp.data }));
 
 export const getAlbumUrl = albumId => `${FLICKR_URL}photos/${SIDETRAIL_USER_ID}/albums/${albumId}`;

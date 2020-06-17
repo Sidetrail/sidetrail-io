@@ -22,11 +22,11 @@ const AlbumCard = ({ album }) => {
         </a>
         <div className="data">
           <div>
-            <div className="dataHeader"># Photos:</div>
+            <div className="dataHeader">Photos</div>
             <div className="dataContent">{album.count_photos}</div>
           </div>
           <div>
-            <div className="dataHeader">Last Updated:</div>
+            <div className="dataHeader">Last Updated</div>
             <div className="dataContent">
               {new Date(+album.date_update * 1000).toLocaleDateString()}
             </div>
