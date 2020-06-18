@@ -24,3 +24,5 @@ export const getPhoto = photoId =>
     .then(resp => ({ id: photoId, ...resp.data }));
 
 export const getAlbumUrl = albumId => `${FLICKR_URL}photos/${SIDETRAIL_USER_ID}/albums/${albumId}`;
+
+export const getPhotoUrl = photoId => `${FLICKR_URL}photos/${SIDETRAIL_USER_ID}/${photoId}`;

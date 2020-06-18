@@ -15,16 +15,23 @@ const PhotosPage = props => {
   return (
     <div className="photosPage">
       <div className="title">Photos</div>
-      <div>Description</div>
-      <div>
+      <div className="desc">
+        Photography is a relatively new hobby of mine, while I have taken many photos over the years
+        I only recently started editing and publishing them publicly. Most of the photos I have are
+        from my years-long backlog from vacations and trips past. Almost all will be landscapes and
+        most will involve national parks.
+      </div>
+      <div className="content">
         <div className="sectionTitle">Albums</div>
         <div className="albumCards">
           {albumbs.map(album => (
             <AlbumCard key={album.id} album={album} />
           ))}
         </div>
+        <hr className="seperator" />
+        <div className="sectionTitle">Recent Photos</div>
+        {recentPhotos.length && <RecentPhotos recentPhotos={recentPhotos} />}
       </div>
-      {recentPhotos.length && <RecentPhotos recentPhotos={recentPhotos} />}
     </div>
   );
 };

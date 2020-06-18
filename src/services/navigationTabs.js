@@ -8,6 +8,7 @@ import withNavBar from '../components/PageComponent/PageComponent';
 export const navigationTabs = [
   {
     url: '/',
+    exact: true,
     component: SplashPage,
     name: 'Home',
   },
@@ -21,11 +22,11 @@ export const navigationTabs = [
     component: withNavBar(PhotosPage),
     name: 'Photos',
   },
-  {
-    url: '/code',
-    component: withNavBar(CodePage),
-    name: 'Code',
-  },
+  // {
+  //   url: '/code',
+  //   component: withNavBar(CodePage),
+  //   name: 'Code',
+  // },
   {
     url: '/contact',
     component: withNavBar(ContactPage),

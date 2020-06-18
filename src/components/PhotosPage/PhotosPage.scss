@@ -1,8 +1,36 @@
 
 .photosPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    .albumCards{
-        display: flex;
-        flex-direction: row;
+    .title{
+        font-size: 45px;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    .desc{
+        margin-top: 36px;
+        text-align: center;
+        width: 800px;
+    }
+    .seperator{
+        color:rgba(201, 201, 201, 0.397);
+        background-color: rgba(201, 201, 201, 0.397);
+        width: 60%;
+        margin-top: 24px;
+        margin-bottom: 24px;
+    }
+    .content{
+        margin: 24px;
+        .sectionTitle{
+            font-size: 35px;
+            letter-spacing: 0.10em;
+        }
+        .albumCards{
+            display: flex;
+            flex-direction: row;
+        }
     }
 }

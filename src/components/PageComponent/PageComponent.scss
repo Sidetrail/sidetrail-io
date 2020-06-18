@@ -1,7 +1,15 @@
 
 .pageComponent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
     .header{
         display: flex;
         justify-content: flex-end;
+    }
+    .footer{
+        display: flex;
+        justify-content: center;
     }
 }

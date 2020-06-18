@@ -1,5 +1,6 @@
 import React from 'react';
 import NavigationTabs from '../NavigationTabs/NavigationTabs';
+import PageFooter from '../PageFooter/PageFooter';
 import './PageComponent.scss';
 
 function withNavBar(Component) {
@@ -9,6 +10,9 @@ function withNavBar(Component) {
         <NavigationTabs />
       </div>
       <Component />
+      <div className="footer">
+        <PageFooter />
+      </div>
     </div>
   );
   return WrappedComponent;

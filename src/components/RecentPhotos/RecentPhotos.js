@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { getPhoto } from '../../services/flickrClient';
+import { getPhoto, getPhotoUrl } from '../../services/flickrClient';
 import './RecentPhotos.scss';
 
 const RecentPhotos = ({ recentPhotos }) => {
@@ -9,11 +9,22 @@ const RecentPhotos = ({ recentPhotos }) => {
       setPhotos(photos.map(photo => ({ ...photo, sizes: resp.find(i => i.id === photo.id) }))),
     );
   }, [recentPhotos]);
-  console.log('photos:', photos);
   return (
     <div className="recentPhotos">
       {photos.map(photo => (
-        <img key={photo.id} />
+        <a
+          href={getPhotoUrl(photo.id)}
+          className="photo"
+          key={photo.id}
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <img
+            src={photo.sizes && photo.sizes.sizes.size.find(size => size.height > 500).source}
+            height="300px"
+            alt={photo.title}
+          />
+        </a>
       ))}
     </div>
   );
