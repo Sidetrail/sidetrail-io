@@ -3,7 +3,7 @@ import NavigationTabs from '../NavigationTabs/NavigationTabs';
 import PageFooter from '../PageFooter/PageFooter';
 import './PageComponent.scss';
 
-function withNavBar(Component) {
+export default function withNavBar(Component) {
   const WrappedComponent = () => (
     <div className="pageComponent">
       <div className="header">
@@ -17,5 +17,3 @@ function withNavBar(Component) {
   );
   return WrappedComponent;
 }
-
-export default withNavBar;

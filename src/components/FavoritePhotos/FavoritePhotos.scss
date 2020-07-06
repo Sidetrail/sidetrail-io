@@ -1,0 +1,15 @@
+
+.favoritePhotos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    .photo{
+        margin: 12px;
+        text-decoration: none;
+        transition: transform .2s;
+    }
+    .photo:hover{
+        transform: scale(1.1);
+    }
+}

@@ -22,11 +22,11 @@ export const navigationTabs = [
     component: withNavBar(PhotosPage),
     name: 'Photos',
   },
-  // {
-  //   url: '/code',
-  //   component: withNavBar(CodePage),
-  //   name: 'Code',
-  // },
+  {
+    url: '/code',
+    component: withNavBar(CodePage),
+    name: 'Code',
+  },
   {
     url: '/contact',
     component: withNavBar(ContactPage),

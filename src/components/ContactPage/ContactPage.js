@@ -43,6 +43,7 @@ const ContactPage = props => {
             'John_Williams@Sidetrail.io',
             'mailto:John_Williams@Sidetrail.io',
           )}
+          {iconPair(<i className="far fa-file" />, 'Resume', 'http://google.com')}
         </div>
       </div>
     </div>

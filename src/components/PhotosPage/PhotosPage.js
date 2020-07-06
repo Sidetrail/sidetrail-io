@@ -1,17 +1,21 @@
 import React, { useEffect, useState } from 'react';
-import { getRecentPhotos, getAlbums } from '../../services/flickrClient';
+import { getRecentPhotos, getAlbums, getFavoritePhotos } from '../../services/flickrClient';
 import AlbumCard from '../AlbumCard/AlbumCard';
 import RecentPhotos from '../RecentPhotos/RecentPhotos';
+import FavoritePhotos from '../FavoritePhotos/FavoritePhotos';
 import './PhotosPage.scss';
 
 const PhotosPage = props => {
   const [recentPhotos, setRecentPhotos] = useState([]);
+  const [favoritePhotos, setFavoritePhotos] = useState([]);
   const [albumbs, setAlbumbs] = useState([]);
   useEffect(() => {
     getRecentPhotos().then(data => setRecentPhotos(data && data.photos && data.photos.photo));
     getAlbums().then(data => setAlbumbs(data && data.photosets && data.photosets.photoset));
+    getFavoritePhotos().then(data =>
+      setFavoritePhotos(data && data.photoset && data.photoset.photo),
+    );
   }, []);
-  console.log(albumbs, recentPhotos);
   return (
     <div className="photosPage">
       <div className="title">Photos</div>
@@ -31,6 +35,9 @@ const PhotosPage = props => {
         <hr className="seperator" />
         <div className="sectionTitle">Recent Photos</div>
         {recentPhotos.length && <RecentPhotos recentPhotos={recentPhotos} />}
+        <hr className="seperator" />
+        <div className="sectionTitle">Favorite Photos</div>
+        {favoritePhotos.length && <FavoritePhotos favPhotos={favoritePhotos} />}
       </div>
     </div>
   );
