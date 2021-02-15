@@ -18,11 +18,11 @@ const BlogPage = props => {
         <Route exact path="/blog">
           <BlogSummary posts={posts} />
         </Route>
-        <Route exact path="/blog/:blogId">
-          <BlogEntry posts={posts} />
-        </Route>
-        <Route path="/blog/">
+        <Route exact path="/blog/not_found">
           <BlogEntryNotFound />
+        </Route>
+        <Route exact path="/blog/:blogTitle">
+          <BlogEntry posts={posts} />
         </Route>
       </Switch>
     </div>

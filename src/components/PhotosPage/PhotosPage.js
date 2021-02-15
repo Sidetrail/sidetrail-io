@@ -4,6 +4,7 @@ import AlbumCard from '../AlbumCard/AlbumCard';
 import RecentPhotos from '../RecentPhotos/RecentPhotos';
 import FavoritePhotos from '../FavoritePhotos/FavoritePhotos';
 import './PhotosPage.scss';
+import Carosel from '../Carosel/Carosel';
 
 const PhotosPage = props => {
   const [recentPhotos, setRecentPhotos] = useState([]);
@@ -28,9 +29,11 @@ const PhotosPage = props => {
       <div className="content">
         <div className="sectionTitle">Albums</div>
         <div className="albumCards">
-          {albumbs.map(album => (
-            <AlbumCard key={album.id} album={album} />
-          ))}
+          <Carosel>
+            {albumbs.map(album => (
+              <AlbumCard key={album.id} album={album} />
+            ))}
+          </Carosel>
         </div>
         <hr className="seperator" />
         <div className="sectionTitle">Recent Photos</div>

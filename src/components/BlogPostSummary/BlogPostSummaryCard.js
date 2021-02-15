@@ -1,5 +1,5 @@
 import React from 'react';
-import './BlogPostSummary.scss';
+import './BlogPostSummaryCard.scss';
 
 const BlogPostSummary = ({ post }) => (
   <div className="blogPostSummary">
@@ -8,5 +8,7 @@ const BlogPostSummary = ({ post }) => (
     <div>{post.tags}</div>
   </div>
 );
+
+const convertTitleToUrl = title => title.replace(' ', '_').toLowerCase();
 
 export default BlogPostSummary;

@@ -1,3 +1,58 @@
 
 .blogSummary {
+
+    .searchContainer {
+        background-color: white;
+        border: 1px solid #ccc!important;
+        border-radius: 16px;
+        width: 60%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        height: 40px;
+        .searchBar {
+            width: 100%;
+            margin-left: 12px;
+            margin-right: 12px;
+            border-width:0px;
+            border:none;
+        }
+        .searchBar:focus {
+            outline: none;
+        }
+
+        .searchIcon {
+            font-size: 25px;
+            color: black;
+            align-self: center;
+            padding: 6px;
+        }
+    }
+
+    .tagPills{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 40%;
+        margin: auto;
+    }
+
+    .searchContainer:focus {
+        outline: blue;
+    }
+
+    .recentPosts {
+        padding: 20px;
+    }
+
+    .tagPill{
+        display: inline-block;
+        background: white;
+        color: black;
+        border-radius: 8px;
+        width: auto;
+        padding: 4px;
+        margin: 8px;
+    }
 }

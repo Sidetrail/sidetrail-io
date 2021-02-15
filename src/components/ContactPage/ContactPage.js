@@ -43,7 +43,11 @@ const ContactPage = props => {
             'John_Williams@Sidetrail.io',
             'mailto:John_Williams@Sidetrail.io',
           )}
-          {iconPair(<i className="far fa-file" />, 'Resume', 'http://google.com')}
+          {iconPair(
+            <i className="far fa-file" />,
+            'Resume',
+            'https://drive.google.com/file/d/1HyKgp1kOR46sYLwNaxt9x2JC_zjq3MaQ/view?usp=sharing',
+          )}
         </div>
       </div>
     </div>

@@ -1,0 +1,18 @@
+
+.aboutPage {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    .aboutMe{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .aboutWebsite{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
