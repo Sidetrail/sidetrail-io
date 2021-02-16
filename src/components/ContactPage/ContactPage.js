@@ -46,7 +46,7 @@ const ContactPage = props => {
           {iconPair(
             <i className="far fa-file" />,
             'Resume',
-            'https://drive.google.com/file/d/1HyKgp1kOR46sYLwNaxt9x2JC_zjq3MaQ/view?usp=sharing',
+            'https://drive.google.com/file/d/1voB4ywG-vA1LfZ-lKNO-L0mquNUbLMox/view?usp=sharing',
           )}
         </div>
       </div>

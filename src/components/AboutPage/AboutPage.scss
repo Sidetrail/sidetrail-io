@@ -5,14 +5,29 @@
     text-align: center;
     width: 100%;
     margin: auto;
-    .aboutMe{
+    .aboutSection{
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
-    }
-    .aboutWebsite{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+        justify-content: center;
+        .aboutLeft{
+            max-width:600px;
+            text-align: right;
+            flex: 0 1 auto;
+            padding:12px;
+        }
+        .aboutRight{
+            max-width:600px;
+            text-align: left;
+            flex: 0 1 auto;
+            padding:12px;
+        }
+        .aboutImage{
+            width:100%;
+        }
+        .aboutSectionTitle{
+            font-family: 'Lato';
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
     }
 }
