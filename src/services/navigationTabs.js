@@ -18,21 +18,21 @@ export const navigationTabs = [
     component: withNavBar(AboutPage),
     name: 'About',
   },
-  {
-    url: '/blog',
-    component: withNavBar(BlogPage),
-    name: 'Blog',
-  },
+  // {
+  //   url: '/blog',
+  //   component: withNavBar(BlogPage),
+  //   name: 'Blog',
+  // },
   {
     url: '/photos',
     component: withNavBar(PhotosPage),
     name: 'Photos',
   },
-  {
-    url: '/code',
-    component: withNavBar(CodePage),
-    name: 'Code',
-  },
+  // {
+  //   url: '/code',
+  //   component: withNavBar(CodePage),
+  //   name: 'Code',
+  // },
   {
     url: '/contact',
     component: withNavBar(ContactPage),
