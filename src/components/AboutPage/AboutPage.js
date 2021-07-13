@@ -14,25 +14,25 @@ const AboutPage = props => (
       <div className="aboutRight">
         <h1 className="aboutSectionTitle">About Me</h1>
         <p>
-          My name is John Williams and I am a software engineer working in enterprise webapp
-          development. I have many different hobbies, some of which are showcased on this very
-          website.
+          My name is John Williams and I am a Software Engineer and eclectic hobbyist always looking for new things to do and new adventures to go on.
         </p>
+        <h4 className="aboutSectionTitle">Work</h4>
         <p>
-          Nunc pulvinar scelerisque quam eget egestas. Aenean vestibulum ipsum posuere turpis
-          sodales pharetra. Pellentesque vitae dui velit. Praesent eu hendrerit sem. Nunc sed orci
-          pharetra, mollis turpis in, vestibulum ante. Cras dapibus, urna sit amet bibendum
-          consequat, mauris mi vehicula ante, bibendum vestibulum quam leo nec risus. Proin maximus
-          quis eros quis luctus. Pellentesque habitant morbi tristique senectus et netus et
-          malesuada fames ac turpis egestas. Aliquam erat volutpat. Sed venenatis eu libero faucibus
-          accumsan.
+          I am a Senior Software Engineer focused on the full stack of applicaiton development from project management and user experience design to 
+          cloud deployments and production monitoring. My goal is to be competent at everything required to build an applicaiton in order to
+          solve whatever problem I come across.
         </p>
+        <h4 className="aboutSectionTitle">Hobby</h4>
+        <p>
+          I have many different hobbies ranging from very outdoorsy activities like backpacking and landscape photography to very indoorsy activities like video editing and model building.
+          </p>
+          <p>These hobbies come in waves, so one week I may post new photos every day and then might not post again for months. I rotate through them as my mood changes or they become convienient to do.</p>
       </div>
     </div>
     <div className="aboutSection">
       <div className="aboutLeft">
         <h1 className="aboutSectionTitle">About Website</h1>
-        This website is both somewhat portfolio website for my software engineering skills and
+        This website is both a portfolio website for my software engineering skills and
         photography, as well as a sandbox for me to play around with. I have plenty of grandiose
         plans for the future, including a blog, and some fun little proof-of-concept apps. I also
         grabbed this domain for the email routing, when you have a extremely common name like mine
