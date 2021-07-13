@@ -8,7 +8,10 @@ const ContactPage = props => {
     <div className="contactPage">
       <div className="title">Contact Me</div>
       <div className="description">
-        While I may not be active on all of these accounts, I will see the notifications.
+        While I may not be active on all of these accounts, I will see the notifications eventually.
+        For professional inquiries, email is the most reliable. For others, keeping the contact
+        method in the context would be easiest (if you want to talk about code, GitHub would be
+        best, if you want to talk about photography, Instagram or Flikr)
       </div>
       <div className="links">
         <div className="socialSection">
