@@ -10,7 +10,10 @@ const BlogSummary = ({ posts }) => {
   return (
     <div className="blogSummary">
       <div className="title">Blog</div>
-      <div>description here</div>
+      <div className="description">
+        This is a collection of my written works. Most are technology focused in nature but there
+        are a few that stray. Most of it is just my ramblings.
+      </div>
       <br />
       <div>
         <div className="searchContainer">
@@ -21,9 +24,11 @@ const BlogSummary = ({ posts }) => {
         </div>
       </div>
       <div className="tagPills">
-        {Object.entries(tags).map(entry => (
-          <div key={entry[0]} className="tagPill">{`${entry[0]} (${entry[1]})`}</div>
-        ))}
+        {Object.entries(tags)
+          .sort((a, b) => b[1] - a[1])
+          .map(entry => (
+            <div key={entry[0]} className="tagPill">{`${entry[0]} (${entry[1]})`}</div>
+          ))}
       </div>
       <div />
       <div className="recentPosts">

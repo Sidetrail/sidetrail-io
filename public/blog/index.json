@@ -3,8 +3,35 @@
         "id":"1",
         "title": "test post",
         "tags":["test","ignore"],
-        "originalPostDate": "",
-        "lastUpdatedDate": "",
+        "originalPostDate": "2021-07-13T17:53:36.315Z",
+        "lastUpdatedDate": "2021-07-13T17:53:36.315Z",
+        "summary": "This is a test post intended to prototype blogs, and this is the description text which is supposed to encapsulate the post itself. It shoulddn't be more than a few sentences but long enough to fill the available space",
+        "url":"test_post"
+    },
+    {
+        "id":"2",
+        "title": "test post 2",
+        "tags":["test","ignore"],
+        "originalPostDate": "2021-07-13T17:53:36.315Z",
+        "lastUpdatedDate": "2021-07-13T17:53:36.315Z",
+        "summary": "This is a test post intended to prototype blogs, and this is the description text which is supposed to encapsulate the post itself. It shoulddn't be more than a few sentences but long enough to fill the available space",
+        "url":"test_post_2"
+    },
+    {
+        "id":"3",
+        "title": "test post 3",
+        "tags":["project management","java"],
+        "originalPostDate": "2021-07-13T17:53:36.315Z",
+        "lastUpdatedDate": "2021-07-13T17:53:36.315Z",
+        "summary": "This is a test post intended to prototype blogs, and this is the description text which is supposed to encapsulate the post itself. It shoulddn't be more than a few sentences but long enough to fill the available space",
+        "url":"test_post_3"
+    },
+    {
+        "id":"4",
+        "title": "test post 4",
+        "tags":["c++","java"],
+        "originalPostDate": "2021-07-13T17:53:36.315Z",
+        "lastUpdatedDate": "2021-07-13T17:53:36.315Z",
         "summary": "This is a test post intended to prototype blogs, and this is the description text which is supposed to encapsulate the post itself. It shoulddn't be more than a few sentences but long enough to fill the available space",
         "url":"test_post"
     }

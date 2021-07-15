@@ -5,5 +5,29 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 12px;
+    padding: 12px !important;
+
+    .blogTitle{
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+    .blogSummary{
+        text-align: left;
+    }
+
+    .tagHolder{
+        display: flex;
+        .blogTag{  
+            background: white;
+            color: black;
+            border-radius: 8px;
+            padding: 4px;
+            margin: 8px;
+        }
+    }
+}
+
+.blogPostSummary:hover{
+    transform: scale(1.1);
 }

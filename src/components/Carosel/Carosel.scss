@@ -4,9 +4,13 @@
     flex-direction: row;
     width: 90vw;
     justify-content: space-between;
+    overflow: hidden;
+    margin: auto;
     .content{
         display: flex;
         flex-direction: row;
+        width: 100%;
+        flex: 0 0 auto;
         overflow-x: scroll;
         overflow-y: hidden;
         padding: 4px;

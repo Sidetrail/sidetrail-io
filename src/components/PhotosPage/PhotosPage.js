@@ -11,11 +11,11 @@ const PhotosPage = props => {
   const [favoritePhotos, setFavoritePhotos] = useState([]);
   const [albumbs, setAlbumbs] = useState([]);
   useEffect(() => {
-    getRecentPhotos().then(data => setRecentPhotos(data && data.photos && data.photos.photo));
-    getAlbums().then(data => setAlbumbs(data && data.photosets && data.photosets.photoset));
-    getFavoritePhotos().then(data =>
-      setFavoritePhotos(data && data.photoset && data.photoset.photo),
+    getRecentPhotos().then(data => setRecentPhotos(data?.photos?.photo));
+    getAlbums().then(data =>
+      setAlbumbs(data?.photosets?.photoset?.sort((a, b) => +b.date_update - a.date_update)),
     );
+    getFavoritePhotos().then(data => setFavoritePhotos(data?.photoset?.photo));
   }, []);
   return (
     <div className="photosPage">
