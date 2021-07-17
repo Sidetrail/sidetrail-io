@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { getPhoto, getPhotoUrl } from '../../services/flickrClient';
+import { getPhoto, getPhotoUrl, getPhotostreamUrl } from '../../services/flickrClient';
 import Carosel from '../Carosel/Carosel';
 import './RecentPhotos.scss';
 
@@ -28,6 +28,19 @@ const RecentPhotos = ({ recentPhotos }) => {
             />
           </a>
         ))}
+        <a href={getPhotostreamUrl()} target="_blank" rel="noreferrer noopener" className="photo">
+          <div
+            style={{
+              height: '300px',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              textDecoration: 'underline',
+            }}
+          >
+            See More
+          </div>
+        </a>
       </Carosel>
     </div>
   );

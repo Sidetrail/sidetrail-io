@@ -36,3 +36,5 @@ export const getPhoto = photoId =>
 export const getAlbumUrl = albumId => `${FLICKR_URL}photos/${SIDETRAIL_USER_ID}/albums/${albumId}`;
 
 export const getPhotoUrl = photoId => `${FLICKR_URL}photos/${SIDETRAIL_USER_ID}/${photoId}`;
+
+export const getPhotostreamUrl = () => `${FLICKR_URL}photos/${SIDETRAIL_USER_ID}/`;
