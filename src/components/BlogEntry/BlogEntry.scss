@@ -1,3 +1,23 @@
 
 .blogEntry {
+
+    .title{
+        text-align: center;
+        text-transform: capitalize;
+    }
+    .createdTime{
+        text-align: center;
+    }
+    .blogTags{
+        display: flex;
+        flex-direction: row;
+        .tag{
+            margin: 12px;
+        }
+    }
+
+    .blogContent{
+        margin: auto;
+        max-width: 680px;
+    }
 }

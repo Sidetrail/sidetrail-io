@@ -8,7 +8,7 @@ const BlogPostSummary = ({ post }) => {
     <button
       className="unbutton blogPostSummary"
       onClick={() => {
-        history.push(post.url);
+        history.push(`/blog/${post.url}`);
       }}
     >
       <div className="blogTitle">{post.title}</div>
@@ -23,7 +23,5 @@ const BlogPostSummary = ({ post }) => {
     </button>
   );
 };
-
-const convertTitleToUrl = title => title.replace(' ', '_').toLowerCase();
 
 export default BlogPostSummary;
