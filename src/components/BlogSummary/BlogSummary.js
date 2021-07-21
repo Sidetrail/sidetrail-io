@@ -1,12 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './BlogSummary.scss';
 import Carosel from '../Carosel/Carosel';
 import BlogPostSummary from '../BlogPostSummary/BlogPostSummaryCard';
 
 const BlogSummary = ({ posts }) => {
+  const [searchInput, setSearchInput] = useState('');
+
   const tags = posts
     .flatMap(post => post.tags)
     .reduce((acc, val) => ({ ...acc, [val]: acc[val] ? acc[val] + 1 : 1 }), {});
+
+  const searchTerms = searchInput?.split(' ') || [];
+  const displayPosts = posts.filter(
+    post =>
+      searchTerms.some(term => post.title.includes(term)) ||
+      searchTerms.some(term => post.summary.includes(term)) ||
+      searchTerms.some(term => post.tags.some(tag => tag.includes(term))),
+  );
+
   return (
     <div className="blogSummary">
       <div className="title">Blog</div>
@@ -17,7 +28,12 @@ const BlogSummary = ({ posts }) => {
       <br />
       <div>
         <div className="searchContainer">
-          <input className="searchBar" placeholder="Search Posts" />
+          <input
+            className="searchBar"
+            placeholder="Search Posts"
+            value={searchInput}
+            onChange={e => setSearchInput(e.target.value)}
+          />
           <div className="searchIcon">
             <i className="fas fa-search" />
           </div>
@@ -27,13 +43,17 @@ const BlogSummary = ({ posts }) => {
         {Object.entries(tags)
           .sort((a, b) => b[1] - a[1])
           .map(entry => (
-            <div key={entry[0]} className="tagPill">{`${entry[0]} (${entry[1]})`}</div>
+            <button
+              key={entry[0]}
+              className="ubutton tagPill"
+              onClick={() => setSearchInput(`${searchInput ? `${searchInput} ` : ''}${entry[0]}`)}
+            >{`${entry[0]} (${entry[1]})`}</button>
           ))}
       </div>
       <div />
       <div className="recentPosts">
         <Carosel>
-          {posts.map(post => (
+          {displayPosts.map(post => (
             <BlogPostSummary post={post} key={post.id} />
           ))}
         </Carosel>
