@@ -1,10 +1,19 @@
 import React, { useState } from 'react';
+import { useLocation } from 'react-router';
 import './BlogSummary.scss';
 import Carosel from '../Carosel/Carosel';
 import BlogPostSummary from '../BlogPostSummary/BlogPostSummaryCard';
 
+function useQuery() {
+  const { search } = useLocation();
+
+  return React.useMemo(() => new URLSearchParams(search), [search]);
+}
+
+const getUrlSearch = query => query.get('tags')?.replace(',', ' ') || '';
+
 const BlogSummary = ({ posts }) => {
-  const [searchInput, setSearchInput] = useState('');
+  const [searchInput, setSearchInput] = useState(getUrlSearch(useQuery()));
 
   const tags = posts
     .flatMap(post => post.tags)
