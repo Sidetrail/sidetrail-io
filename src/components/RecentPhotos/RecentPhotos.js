@@ -9,6 +9,7 @@ const RecentPhotos = ({ recentPhotos }) => {
     Promise.all(recentPhotos.map(photo => getPhoto(photo.id))).then(resp =>
       setPhotos(photos.map(photo => ({ ...photo, sizes: resp.find(i => i.id === photo.id) }))),
     );
+    // eslint-disable-next-line
   }, [recentPhotos]);
   return (
     <div className="recentPhotos">

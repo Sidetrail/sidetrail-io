@@ -1,5 +1,4 @@
 import SplashPage from '../components/SplashPage/SplashPage';
-import CodePage from '../components/CodePage/CodePage';
 import ContactPage from '../components/ContactPage/ContactPage';
 import AboutPage from '../components/AboutPage/AboutPage';
 import BlogPage from '../components/BlogPage/BlogPage';

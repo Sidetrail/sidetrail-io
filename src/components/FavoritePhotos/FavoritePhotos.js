@@ -4,11 +4,19 @@ import './FavoritePhotos.scss';
 
 const FavoritePhotos = ({ favPhotos }) => {
   const [photos, setPhotos] = useState(favPhotos);
+
   useEffect(() => {
     Promise.all(favPhotos.map(photo => getPhoto(photo.id))).then(resp =>
-      setPhotos(photos.map(photo => ({ ...photo, sizes: resp.find(i => i.id === photo.id) }))),
+      setPhotos(
+        photos.map(photo => ({
+          ...photo,
+          sizes: resp.find(i => i.id === photo.id),
+        })),
+      ),
     );
-  }, [favPhotos]);
+    // eslint-disable-next-line
+  }, []);
+
   return (
     <div className="favoritePhotos">
       {photos.map(photo => (

@@ -18,11 +18,11 @@ const BlogEntry = ({ posts }) => {
       .catch(resp => {
         history.replace(`/blog/not_found`);
       });
-  }, []);
+  }, [blogTitle, history]);
 
   useEffect(() => {
     setPost(posts.find(i => i.url === blogTitle));
-  }, [posts]);
+  }, [posts, blogTitle]);
 
   return (
     <div className="blogEntry">

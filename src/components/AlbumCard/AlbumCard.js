@@ -6,7 +6,7 @@ const AlbumCard = ({ album }) => {
   const [backgroundPhoto, setBackgroundPhoto] = useState();
   useEffect(() => {
     getPhoto(album.primary).then(resp => setBackgroundPhoto(resp.sizes.size));
-  }, []);
+  }, [album.primary]);
 
   const bgPhoto = backgroundPhoto && backgroundPhoto.find(size => size.height > 400);
   return (
