@@ -1,13 +1,66 @@
 <div>
-    <h2 style="margin: auto; text-align: center;">hello world</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus risus neque, mattis bibendum diam non, vehicula tincidunt mi. Duis quis felis aliquet, varius magna non, vehicula felis. Suspendisse non eros eget ipsum tincidunt sagittis. Etiam vulputate sem sem, sit amet maximus lacus porttitor a. Curabitur eget placerat neque. Morbi scelerisque vel magna a elementum. Mauris varius tincidunt tempor. Nunc ex lectus, sodales ut nulla nec, ultricies fringilla nisi. Proin dignissim venenatis felis ac imperdiet. Ut lobortis posuere ligula vel gravida. Sed id auctor tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam aliquet non diam sagittis faucibus. Praesent nec tellus mattis magna ultricies pharetra sit amet non nibh. Praesent scelerisque arcu suscipit massa feugiat, nec placerat tortor rhoncus.
+    <p>This is a demo post showing the features and capabilites of the blog posts on this website, as well as a brief overview of how they work</p>
+    <h2>Features</h2>
+    
+    
+    
+    <h3>Formatting and Markdown</h3>
+    <p>Each post is written in as a HTML file and supports the styling and formatting that is supported by modern HTML, for example </p>
+    <ul>
+        <li>Lists</li>
+        <li>
+            <p>Code blocks</p>
+            <pre>
+                <code style="background-color: #999;
+                margin: 0;
+                display: block;
+                padding: 5px;">
+const sum =  (x, y) => {
+    return x+y
+}
+                </code>
+            </pre>
+        </li>
+        <li>
+            <p>Images</p>
+            <img height="200px" src="https://i.imgur.com/9Beeo55.jpg"></img>
+        </li>
+        <li>And more!</li>
+    </ul>
+    <h3>Embedded Code</h3>
+    <p>Using JSFiddle, I can embed runable code into the blog post itself</p>
+    <iframe width="100%" height="300" src="//jsfiddle.net/enw5rcdx/embedded/js,html,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+    <h2>How It Works</h2>
+    <p>Each blog post is just an HTML file dynamically loaded from the public folder of the deployed application. The react code makes a request based on the URL for a HTML file and then sets the innerHTML to the payload</p>
+    <p>There is an index file that is fetched that contains the list of all blog posts and some summary information about them, below is an example payload containing a single blog post.</p>
+    <pre>
+        <code style="background-color: #999;
+        margin: 0;
+        display: block;
+        padding: 5px;">
+[
+    {
+        "id":"1",
+        "title": "Demo Post",
+        "headerImage":"/blog/header1.jpg",
+        "tags":["test", "demo", "website"],
+        "originalPostDate": "2021-07-13T17:53:36.315Z",
+        "lastUpdatedDate": "2022-02-11T17:17:14.102Z",
+        "summary": "This is a test post intended to prototype blogs.",
+        "url":"test_post"
+    }
+]
+        </code>
+    </pre>
+    <p>This index file is the basis for blog landing page, and drives the functionality behind the tags and filtering as well</p>
+    <p>The code can be found <a href="https://github.com/Sidetrail/sidetrail-io">here</a></p>
+    
+    <h2>Random Lorem Ipsum</h2>
     </p>
         <p>Morbi faucibus elit quis quam vulputate, nec condimentum justo dictum. Nullam non orci sed nisi efficitur scelerisque at a sapien. Curabitur rutrum lectus ac eros bibendum ornare. Phasellus hendrerit at nulla ac consequat. Curabitur in felis dapibus, aliquam odio id, venenatis nulla. Fusce leo quam, molestie ut nisi quis, pretium pulvinar lacus. Integer vel risus aliquam, finibus ante id, ultrices orci. Donec vel metus vulputate, tempus turpis sed, vulputate velit. Nulla pharetra nec nunc sit amet bibendum. Sed aliquam tincidunt pharetra. Duis rutrum orci non arcu bibendum, eu viverra tellus venenatis. Aliquam justo elit, lacinia eget condimentum vitae, placerat vel massa. Sed ac egestas diam. Praesent dignissim iaculis massa, et fermentum augue facilisis in. In rutrum turpis nec nisl egestas finibus.
         </p>
         <p>Aliquam erat volutpat. Nam eget mauris erat. Cras commodo lacus venenatis risus luctus commodo. Aenean finibus ante quis leo porta aliquam. Nulla justo lacus, pulvinar non aliquet ut, imperdiet at nisl. Duis nec cursus nisi, eget mollis ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec dolor nibh, commodo sed vehicula ut, tempus at enim. Donec dignissim purus eu mi mattis laoreet. Maecenas ut tempus lacus. Aliquam fermentum posuere odio, ac pharetra ante tempor vel. Vivamus pharetra quam eget urna consequat rutrum. Nunc maximus justo in tincidunt suscipit.
         </p>
-        <pre>test code block please ignore</pre>
-
     <h2 style="margin: auto; text-align: center;">Conclusion</h2>
        <p> Suspendisse sit amet nisi tempus, dictum elit vitae, imperdiet ipsum. Integer vel purus sit amet lorem viverra egestas in vel nisl. Duis risus est, tincidunt ac nisl eget, pharetra lobortis urna. Phasellus auctor pellentesque quam, vel imperdiet nisi eleifend imperdiet. Duis auctor vestibulum ipsum eu efficitur. Sed posuere nisi eu enim elementum, ac finibus leo convallis. Vestibulum non mollis ipsum. Etiam mauris sem, viverra sit amet mi et, vulputate tristique lorem. Sed blandit massa ut mauris laoreet, vitae maximus purus sollicitudin.
     </p>

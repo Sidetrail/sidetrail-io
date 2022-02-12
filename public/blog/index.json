@@ -1,39 +1,12 @@
 [
     {
         "id":"1",
-        "title": "test post",
+        "title": "Demo Post",
         "headerImage":"/blog/header1.jpg",
-        "tags":["test","ignore"],
+        "tags":["test", "demo", "website"],
         "originalPostDate": "2021-07-13T17:53:36.315Z",
-        "lastUpdatedDate": "2021-07-17T17:53:36.315Z",
-        "summary": "This is a test post intended to prototype blogs, and this is the description text which is supposed to encapsulate the post itself. It shoulddn't be more than a few sentences but long enough to fill the available space",
-        "url":"test_post"
-    },
-    {
-        "id":"2",
-        "title": "test post 2",
-        "tags":["test","ignore"],
-        "originalPostDate": "2021-07-13T17:53:36.315Z",
-        "lastUpdatedDate": "2021-07-18T17:53:36.315Z",
-        "summary": "This is a test post intended to prototype blogs, and this is the description text which is supposed to encapsulate the post itself. It shoulddn't be more than a few sentences but long enough to fill the available space",
-        "url":"test_post_2"
-    },
-    {
-        "id":"3",
-        "title": "test post 3",
-        "tags":["project management","java"],
-        "originalPostDate": "2021-07-13T17:53:36.315Z",
-        "lastUpdatedDate": "2021-07-13T17:53:36.315Z",
-        "summary": "This is a test post intended to prototype blogs, and this is the description text which is supposed to encapsulate the post itself. It shoulddn't be more than a few sentences but long enough to fill the available space",
-        "url":"test_post_3"
-    },
-    {
-        "id":"4",
-        "title": "test post 4",
-        "tags":["c++","java"],
-        "originalPostDate": "2021-07-13T17:53:36.315Z",
-        "lastUpdatedDate": "2021-07-13T17:53:36.315Z",
-        "summary": "This is a test post intended to prototype blogs, and this is the description text which is supposed to encapsulate the post itself. It shoulddn't be more than a few sentences but long enough to fill the available space",
+        "lastUpdatedDate": "2022-02-11T17:17:14.102Z",
+        "summary": "This is a test post intended to prototype blogs, showing some of the supported features and capabilities. This is the summary of the article, which should be short, but long enough to fill the page and hook potential readers.",
         "url":"test_post"
     }
 ]

@@ -30,31 +30,36 @@ const BlogEntry = ({ posts }) => {
         className="blogHeader"
         style={{
           background: `${
-            post?.headerImage ? `url(${post.headerImage})` : 'black'
+            post?.headerImage ? `url(${post.headerImage})` : '#121212'
           } no-repeat center`,
+          backgroundSize: 'cover',
         }}
       >
-        <i className="fas fa-angle-left" />
-        <h1 className="title">{post?.title}</h1>
-        <h4 className="createdTime">
-          {DateTime.fromISO(post?.originalPostDate).toLocaleString(DateTime.DATE_FULL)}
-          {post?.lastUpdatedDate && post.lastUpdatedDate !== post.originalPostDate && (
-            <div className="updatedTime">
-              * Last updated{' '}
-              {DateTime.fromISO(post.lastUpdatedDate).toLocaleString(DateTime.DATE_FULL)}
-            </div>
-          )}
-        </h4>
-        <div className="blogTags">
-          {post?.tags?.map(tag => (
-            <button
-              key={tag}
-              className="unbutton tag"
-              onClick={() => history.push(`/blog?tags=${tag}`)}
-            >
-              {tag}
-            </button>
-          ))}
+        <button className="unbutton backButton" onClick={() => history.push('/blog')}>
+          <i className="fas fa-angle-left fa-3x" />
+        </button>
+        <div className="titleContainer">
+          <h1 className="title">{post?.title}</h1>
+          <h4 className="createdTime">
+            {DateTime.fromISO(post?.originalPostDate).toLocaleString(DateTime.DATE_FULL)}
+            {post?.lastUpdatedDate && post.lastUpdatedDate !== post.originalPostDate && (
+              <div className="updatedTime">
+                * Last updated{' '}
+                {DateTime.fromISO(post.lastUpdatedDate).toLocaleString(DateTime.DATE_FULL)}
+              </div>
+            )}
+          </h4>
+          <div className="blogTags">
+            {post?.tags?.map(tag => (
+              <button
+                key={tag}
+                className="unbutton tag"
+                onClick={() => history.push(`/blog?tags=${tag}`)}
+              >
+                {tag}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
       <hr className="seperator" />
