@@ -7,7 +7,7 @@ const PageNotFound = props => {
   const navigate = useNavigate();
   useEffect(() => {
     navigate('/404', { replace: true });
-  }, []);
+  }, [navigate]);
   return (
     <div className="pageNotFound">
       <div className="notFoundIcon">

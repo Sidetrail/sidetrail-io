@@ -6,8 +6,8 @@ const SIDETRAIL_USER_ID = '188185390@N02';
 const FLICKR_URL = 'https://www.flickr.com/';
 const FAV_ALBUM_ID = '72157714985764211';
 
-const getUrlForMethod = method =>
-  `${BASE_URL + method}&api_key=${API_KEY}&per_page=10&format=json&nojsoncallback=1`;
+const getUrlForMethod = (method, amount) =>
+  `${BASE_URL + method}&api_key=${API_KEY}&per_page=${amount || '10'}&format=json&nojsoncallback=1`;
 
 export const getRecentPhotos = () =>
   axios
@@ -23,7 +23,8 @@ export const getFavoritePhotos = () =>
   axios
     .get(
       getUrlForMethod(
-        `flickr.photosets.getPhotos&user_id=${SIDETRAIL_USER_ID}&photoset_id=${FAV_ALBUM_ID}`,
+        `flickr.photosets.getPhotos&user_id=${SIDETRAIL_USER_ID}&photoset_id=${FAV_ALBUM_ID}&extras=date_upload`,
+        500
       ),
     )
     .then(resp => resp.data);

@@ -12,4 +12,17 @@
     .photo:hover{
         transform: scale(1.1);
     }
+    .loadMore{
+        background-color: black;
+        margin: 12px;
+        height:300px;
+        width: 300px;
+        text-decoration: none;
+        font-size: 24px;
+        transition: transform .2s;
+        border-radius: 25px !important;
+    }
+    .loadMore:hover{
+        transform: scale(1.1);
+    }
 }
