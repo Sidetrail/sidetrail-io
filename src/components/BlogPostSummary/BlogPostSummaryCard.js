@@ -1,14 +1,14 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './BlogPostSummaryCard.scss';
 
 const BlogPostSummary = ({ post }) => {
-  const history = useHistory();
+  const navigate = useNavigate();
   return (
     <button
       className="unbutton blogPostSummary"
       onClick={() => {
-        history.push(`/blog/${post.url}`);
+        navigate(`/blog/${post.url}`);
       }}
     >
       <div className="blogTitle">{post.title}</div>

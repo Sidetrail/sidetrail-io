@@ -1,32 +1,25 @@
-import React, { useState, useEffect } from 'react';
-import { Switch, Route } from 'react-router-dom';
-import axios from 'axios';
-import BlogSummary from '../BlogSummary/BlogSummary';
-import BlogEntry from '../BlogEntry/BlogEntry';
-import { useSetTitle } from '../../services/titleservice';
-import BlogEntryNotFound from '../BlogEntryNotFound/BlogEntryNotFound';
-import './BlogPage.scss';
+import React, { useState, useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
+import axios from "axios";
+import BlogSummary from "../BlogSummary/BlogSummary";
+import BlogEntry from "../BlogEntry/BlogEntry";
+import { useSetTitle } from "../../services/titleservice";
+import BlogEntryNotFound from "../BlogEntryNotFound/BlogEntryNotFound";
+import "./BlogPage.scss";
 
-const BlogPage = props => {
+const BlogPage = (props) => {
   const [posts, setPosts] = useState([]);
-  useSetTitle('Blog');
+  useSetTitle("Blog");
   useEffect(() => {
-    axios.get('/blog/index.json').then(resp => setPosts(resp.data));
+    axios.get("/blog/index.json").then((resp) => setPosts(resp.data));
   }, []);
-  console.log('posts:', posts);
   return (
     <div className="blogPage">
-      <Switch>
-        <Route exact path="/blog">
-          <BlogSummary posts={posts} />
-        </Route>
-        <Route exact path="/blog/not_found">
-          <BlogEntryNotFound />
-        </Route>
-        <Route exact path="/blog/:blogTitle">
-          <BlogEntry posts={posts} />
-        </Route>
-      </Switch>
+      <Routes>
+        <Route path="/" element={<BlogSummary posts={posts} />} />
+        <Route path="/not_found" element={<BlogEntryNotFound />} />
+        <Route path="/:blogTitle" element={<BlogEntry posts={posts} />} />
+      </Routes>
     </div>
   );
 };

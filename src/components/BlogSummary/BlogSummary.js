@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useLocation } from 'react-router';
+import { useLocation } from 'react-router-dom';
 import './BlogSummary.scss';
 import Carosel from '../Carosel/Carosel';
 import BlogPostSummary from '../BlogPostSummary/BlogPostSummaryCard';

@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import Axios from 'axios';
-import { useParams, useHistory, Link } from 'react-router-dom';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 import { DateTime } from 'luxon';
 import { useSetTitle } from '../../services/titleservice';
 import './BlogEntry.scss';
 
 const BlogEntry = ({ posts }) => {
-  const history = useHistory();
+  const navigate = useNavigate();
   const { blogTitle } = useParams();
   const [post, setPost] = useState();
   const [articleBody, setArticleBody] = useState();
@@ -16,9 +16,9 @@ const BlogEntry = ({ posts }) => {
     Axios.get(`/blog/${blogTitle}.html`)
       .then(resp => setArticleBody(resp.data))
       .catch(resp => {
-        history.replace(`/blog/not_found`);
+        navigate(`/blog/not_found`, { replace: true });
       });
-  }, [blogTitle, history]);
+  }, [blogTitle, navigate]);
 
   useEffect(() => {
     setPost(posts.find(i => i.url === blogTitle));
@@ -35,7 +35,7 @@ const BlogEntry = ({ posts }) => {
           backgroundSize: 'cover',
         }}
       >
-        <button className="unbutton backButton" onClick={() => history.push('/blog')}>
+        <button className="unbutton backButton" onClick={() => navigate('/blog')}>
           <i className="fas fa-angle-left fa-3x" />
         </button>
         <div className="titleContainer">
@@ -54,7 +54,7 @@ const BlogEntry = ({ posts }) => {
               <button
                 key={tag}
                 className="unbutton tag"
-                onClick={() => history.push(`/blog?tags=${tag}`)}
+                onClick={() => navigate(`/blog?tags=${tag}`)}
               >
                 {tag}
               </button>
