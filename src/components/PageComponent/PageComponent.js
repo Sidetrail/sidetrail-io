@@ -6,9 +6,9 @@ import './PageComponent.scss';
 export default function withNavBar(Component) {
   const WrappedComponent = () => (
     <div className="pageComponent">
-      <div className="header">
+      <header className="header">
         <NavigationTabs />
-      </div>
+      </header>
       <Component />
       <div className="footer">
         <PageFooter />
