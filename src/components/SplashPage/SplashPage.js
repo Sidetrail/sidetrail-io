@@ -1,10 +1,8 @@
-import React from 'react';
-import { useSetTitle } from '../../services/titleservice';
-import NavigationTabs from '../NavigationTabs/NavigationTabs';
-import './SplashPage.scss';
+import React from "react";
+import NavigationTabs from "../NavigationTabs/NavigationTabs";
+import "./SplashPage.scss";
 
-const SplashPage = props => {
-  useSetTitle('Sidetrail');
+const SplashPage = (props) => {
   return (
     <div className="splashPage">
       <div className="fadedCover">

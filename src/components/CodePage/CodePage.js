@@ -1,9 +1,7 @@
-import React from 'react';
-import { useSetTitle } from '../../services/titleservice';
-import './CodePage.scss';
+import React from "react";
+import "./CodePage.scss";
 
-const CodePage = props => {
-  useSetTitle('Code');
+const CodePage = (props) => {
   return <div className="codePage">CodePage</div>;
 };
 

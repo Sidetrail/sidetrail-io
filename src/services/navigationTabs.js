@@ -11,21 +11,25 @@ export const navigationTabs = [
     exact: true,
     component: SplashPage,
     name: 'Home',
+    title: 'Sidetrail' 
   },
   {
     url: '/about',
     component: withNavBar(AboutPage),
     name: 'About',
+    title: 'About' 
   },
   {
     url: '/blog',
     component: withNavBar(BlogPage),
     name: 'Blog',
+    title: 'Blog' 
   },
   {
     url: '/photos',
     component: withNavBar(PhotosPage),
     name: 'Photos',
+    title: 'Photos' 
   },
   // {
   //   url: '/code',
@@ -36,5 +40,6 @@ export const navigationTabs = [
     url: '/contact',
     component: withNavBar(ContactPage),
     name: 'Contact',
+    title: 'Contact' 
   },
 ];
