@@ -6,8 +6,8 @@ import "./NavigationTabs.scss";
 
 const NavigationTabs = (props) => {
   const location = useLocation();
-  const [mobileMenuOpen, setMobileOpen] = useState(false);
   const activeTab = navigationTabs.find((tab) => location.pathname === tab.url);
+  const [mobileMenuOpen, setMobileOpen] = useState(activeTab.name=='Home' ? true : false);
   useSetTitle(activeTab?.title || "Sidetrail");
 
   const getNavLinks = () =>
@@ -28,10 +28,10 @@ const NavigationTabs = (props) => {
     <React.Fragment>
       <nav className="navigationTabs">{getNavLinks()}</nav>
       <nav className="mobileTabs">
-        <i
+        {activeTab.name!='Home' && <i
           onClick={() => setMobileOpen(!mobileMenuOpen)}
           className="hamburgerIcon fas fa-solid fa-bars fa-3x"
-        ></i>
+        ></i>}
         {mobileMenuOpen && getNavLinks()}
       </nav>
     </React.Fragment>
