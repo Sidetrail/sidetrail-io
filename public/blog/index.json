@@ -8,5 +8,15 @@
         "lastUpdatedDate": "2022-02-11T17:17:14.102Z",
         "summary": "This is a test post intended to prototype blogs, showing some of the supported features and capabilities. This is the summary of the article, which should be short, but long enough to fill the page and hook potential readers.",
         "url":"test_post"
+    },
+    {
+        "id":"2",
+        "title": "Cybermath",
+        "headerImage":"",
+        "tags":["cyberpunk", "tabletop", "website", "stats"],
+        "originalPostDate": "",
+        "lastUpdatedDate": "",
+        "summary": "A brief look into the methodology and building of the cybermath application.",
+        "url":"cybermath"
     }
 ]

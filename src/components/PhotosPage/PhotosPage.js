@@ -30,17 +30,17 @@ const PhotosPage = props => {
         <div className="sectionTitle">Albums</div>
         <div className="albumCards">
           <Carosel>
-            {albumbs.map(album => (
+            {albumbs?.map(album => (
               <AlbumCard key={album.id} album={album} />
             ))}
           </Carosel>
         </div>
         <hr className="seperator" />
         <div className="sectionTitle">Recent Photos</div>
-        {recentPhotos.length && <RecentPhotos recentPhotos={recentPhotos} />}
+        {recentPhotos?.length && <RecentPhotos recentPhotos={recentPhotos} />}
         <hr className="seperator" />
         <div className="sectionTitle">Favorite Photos</div>
-        {favoritePhotos.length && <FavoritePhotos favPhotos={favoritePhotos} />}
+        {favoritePhotos?.length && <FavoritePhotos favPhotos={favoritePhotos} />}
       </div>
     </div>
   );
