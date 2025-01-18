@@ -1,0 +1,15 @@
+<div>
+    <h2>Intent</h2>
+    <p>This is a Damage Per Round calculator to be used with the tabletop RPG Cyberpunk RED</p>
+    <p>I built this for my character, a Solo, so it is focused on ranged weapons pitted against armor values and range tables. The goal was to build a tool to show the optimal single-round action for a given scenario and generate a table that can be referenced quickly in game. This is not perfect, as there are many scenarios in which you would need specific outputs.</p>
+    <p>For example, in a game that was run recently, my character needed to assassinate a target, and would realistically only get one shot. So even though single shot had the more consistent DPR, targeted shot was chosen to get the highest damage possible for the kill.</p>
+    <h2>Methodology</h2>
+    <p>Each weapon attack is run 10,000 times against each common armor class for each range bracket. (Which means generating a talbe takes 64,0000 attacks! That's a lot of dead chooms). An attack roll is made using the provided skills just like the game, a simulated d10 is rolled each attack, and dice explosions and implosions are taken into account. </br> Assuming the attack hits, damage is rolled which adds critical injuries and autofire multipliers. Each attack is treated in a vacuum, and armor ablation, ammunition types, and any multi-round considerations are not calculated here. Rate of fire is taken into consideration, but it is assumed that you are taking both attacks within the same range bracket, and does NOT take into accound armor ablation (maybe a future enhancement?)</p>
+    <p>Once all the runs are complete they are compiled into a combo-chart showing the average result taking into consideration the range and armor. Each cell is filled with the average damage done over the course of the trial. A table is generated for each attack, and then at the top a combined table is generated showing the name of the attack that has the highest average damage for a given range/armor combo</p>
+    <h2>Future Enhancements</h2>
+    <p>This is pretty wrapped up for now but maybe in the future I will add things such as dodge vs range, melee weapons, armor ablation, and multi round simulation</p>
+    <h2>Links</h2>
+    <p>Visit the Cybermath website <a href="https://cybermath.sidetrail.io" target="_blank" rel="noreferrer noopener">here</a></p>
+    <p>Source code can be found <a href="https://github.com/Sidetrail/cybermath" target="_blank" rel="noreferrer noopener">here</a></p>
+    <p>For any feedback please message me via reddit at <a href="https://old.reddit.com/user/Sidetrail/" target="_blank" rel="noreferrer noopener">/u/sidetrail</a></p>
+</div>
