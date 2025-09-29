@@ -12,7 +12,7 @@ const FavoritePhotos = ({ favPhotos }) => {
       setPhotos(
         photos.map((photo) => ({
           ...photo,
-          sizes: resp.find((i) => i.id === photo.id),
+          sizes: resp.find((i) => i.id === photo.id)?.sizes,
         }))
       )
     );
@@ -34,8 +34,7 @@ const FavoritePhotos = ({ favPhotos }) => {
           >
             <img
               src={
-                photo.sizes &&
-                photo.sizes.sizes.size.find((size) => size.height > 500).source
+                photo?.sizes?.size?.find((size) => size.height > 500)?.source || photo?.sizes?.size[photo?.sizes?.size.length -1]?.source
               }
               height="300px"
               alt={photo.title}
