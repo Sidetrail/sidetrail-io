@@ -19,7 +19,7 @@ const PhotosPage = props => {
   }, []);
   return (
     <div className="photosPage">
-      <div className="title">Photos</div>
+      <h1 className="title">Photos</h1>
       <div className="desc">
         Photography is a relatively new hobby of mine, while I have taken many photos over the years
         I only recently started editing and publishing them publicly. Most of the photos I have are
@@ -27,7 +27,7 @@ const PhotosPage = props => {
         most will involve national parks.
       </div>
       <div className="content">
-        <div className="sectionTitle">Albums</div>
+        <h2 className="sectionTitle">Albums</h2>
         <div className="albumCards">
           <Carosel>
             {albumbs?.map(album => (
@@ -36,10 +36,10 @@ const PhotosPage = props => {
           </Carosel>
         </div>
         <hr className="seperator" />
-        <div className="sectionTitle">Recent Photos</div>
+        <h2 className="sectionTitle">Recent Photos</h2>
         {recentPhotos?.length && <RecentPhotos recentPhotos={recentPhotos} />}
         <hr className="seperator" />
-        <div className="sectionTitle">Favorite Photos</div>
+        <h2 className="sectionTitle">Favorite Photos</h2>
         {favoritePhotos?.length && <FavoritePhotos favPhotos={favoritePhotos} />}
       </div>
     </div>

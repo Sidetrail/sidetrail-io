@@ -6,7 +6,7 @@ const SplashPage = (props) => {
   return (
     <div className="splashPage">
       <div className="fadedCover">
-        <div className="title">Sidetrail</div>
+        <h1 className="title">Sidetrail</h1>
         <NavigationTabs />
       </div>
     </div>

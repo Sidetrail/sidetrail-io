@@ -27,10 +27,14 @@ const NavigationTabs = (props) => {
     <React.Fragment>
       <nav className="navigationTabs">{getNavLinks()}</nav>
       <nav className="mobileTabs">
-        {activeTab?.name !== 'Home' && <i
+        {activeTab?.name !== 'Home' && <button
           onClick={() => setMobileOpen(!mobileMenuOpen)}
-          className="hamburgerIcon fas fa-solid fa-bars fa-3x"
-        ></i>}
+          className="hamburgerButton"
+          aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-expanded={mobileMenuOpen}
+        >
+          <i className="hamburgerIcon fas fa-solid fa-bars fa-3x" aria-hidden="true"></i>
+        </button>}
         {mobileMenuOpen && getNavLinks()}
       </nav>
     </React.Fragment>

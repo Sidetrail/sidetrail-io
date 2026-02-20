@@ -4,7 +4,7 @@ import "./ContactPage.scss";
 const ContactPage = (props) => {
   return (
     <div className="contactPage">
-      <div className="title">Contact Me</div>
+      <h1 className="title">Contact Me</h1>
       <div className="description">
         While I may not be active on all of these accounts, I will see the
         notifications eventually. For professional inquiries, email is the most
@@ -14,7 +14,7 @@ const ContactPage = (props) => {
       </div>
       <div className="links">
         <div className="socialSection">
-          <div className="subTitle">Social</div>
+          <h2 className="subTitle">Social</h2>
           {iconPair(
             <i className="fab fa-instagram" />,
             "Instagram",
@@ -37,7 +37,7 @@ const ContactPage = (props) => {
           )}
         </div>
         <div className="professionalSection">
-          <div className="subTitle">Professional</div>
+          <h2 className="subTitle">Professional</h2>
           {iconPair(
             <i className="fab fa-linkedin-in" />,
             "LinkedIn",
@@ -70,8 +70,9 @@ const iconPair = (icon, name, url) => (
     className="socialLink"
     target="_blank"
     rel="noreferrer noopener"
+    aria-label={name}
   >
-    <div className="linkIcon">{icon}</div>
+    <div className="linkIcon" aria-hidden="true">{icon}</div>
     <div className="linkName">{name}</div>
   </a>
 );

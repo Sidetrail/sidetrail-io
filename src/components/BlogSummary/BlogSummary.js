@@ -29,7 +29,7 @@ const BlogSummary = ({ posts }) => {
 
   return (
     <div className="blogSummary">
-      <div className="title">Blog</div>
+      <h1 className="title">Blog</h1>
       <div className="description">
         This is a collection of my written works. Most are technology focused in nature but there
         are a few that stray. Most of it is just my ramblings.
@@ -37,13 +37,16 @@ const BlogSummary = ({ posts }) => {
       <br />
       <div>
         <div className="searchContainer">
+          <label htmlFor="blog-search" className="visually-hidden">Search Posts</label>
           <input
+            id="blog-search"
             className="searchBar"
             placeholder="Search Posts"
             value={searchInput}
             onChange={e => setSearchInput(e.target.value)}
+            aria-label="Search blog posts"
           />
-          <div className="searchIcon">
+          <div className="searchIcon" aria-hidden="true">
             <i className="fas fa-search" />
           </div>
         </div>
