@@ -1,14 +1,14 @@
 
 .blogPostSummary {
     height: 15em;
-    width: 400px;
+    width: clamp(250px, 80vw, 400px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 12px !important;
 
     .blogTitle{
-        font-size: 24px;
+        font-size: clamp(1rem, 4vw, 24px);
         font-weight: 500;
     }
 

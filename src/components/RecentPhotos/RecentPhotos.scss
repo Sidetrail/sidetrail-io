@@ -2,7 +2,7 @@
 .recentPhotos {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
     .photo{
         margin: 12px;
@@ -11,5 +11,10 @@
     }
     .photo:hover{
         transform: scale(1.1);
+    }
+
+    .photo img {
+        height: 300px;
+        width: auto;
     }
 }

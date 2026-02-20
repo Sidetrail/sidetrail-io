@@ -18,7 +18,7 @@
             color: white;
             text-shadow: 1px 1px 15px black;
             font-family: 'Lato', sans-serif;
-            font-size: 72px;
+            font-size: clamp(2rem, 8vw, 72px);
             letter-spacing: 0.10em;
             text-transform: uppercase;
         }
